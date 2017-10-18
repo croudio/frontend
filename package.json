@@ -28,11 +28,13 @@
   },
   "devDependencies": {
     "@storybook/react": "^3.2.3",
-    "react-scripts": "1.0.10"
+    "react-scripts": "1.0.10",
+    "serverless-s3-sync": "^1.3.0"
   },
   "scripts": {
     "start": "react-scripts start & yarn run storybook",
     "build": "react-scripts build",
+    "deploy": "npm run build && serverless deploy",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
